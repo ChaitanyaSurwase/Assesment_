@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "83b5050b-fe5c-472f-a3be-0fed37d76c4d",
+		"name": "Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Route",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n    \"Username\": \"aman\",\n    \"email\": \"aman@gmail.com\",\n    \"password\": \"sss\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"email\":\"aman@gmail.com\",\n     \"password\": \"sss\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTRkNWM1M2I5MTI1MzJjNzYzZWNkNSIsImlhdCI6MTY5MjcxODU0OX0.FqIApWV9ooOJnsdu9-5-J3VOakA9mBd0hBLcJseNUKg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"updatedEmail1@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/updateUser/64e4d416cf707976b99e7a91",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"updateUser",
+						"64e4d416cf707976b99e7a91"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Delete ",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZTRkNWM1M2I5MTI1MzJjNzYzZWNkNSIsImlhdCI6MTY5MjcxODU0OX0.FqIApWV9ooOJnsdu9-5-J3VOakA9mBd0hBLcJseNUKg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/users/deleteUser/64e4d416cf707976b99e7a91",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"deleteUser",
+						"64e4d416cf707976b99e7a91"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
