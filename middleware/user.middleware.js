@@ -23,8 +23,6 @@ function isAuthenticated(req, res, next) {
     if (!token) return res.status(401).send('Access Denied: No Token Provided');
 
     try {
-        // const verified = JWT.verify(token, 'YOUR_FIXED_SECRET');
-
         const verified = JWT.verify(token, 'mySuperSecretKey');
         next();
     } catch (error) {
@@ -34,7 +32,7 @@ function isAuthenticated(req, res, next) {
 
 
 
-// Exporting middlewares
+
 module.exports = {
     logRequests,
     setHeaders,
