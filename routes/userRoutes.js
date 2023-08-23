@@ -4,7 +4,7 @@ const router = express.Router();
 const userController = require("../controllers/user");
 const { logRequests, setHeaders, isAuthenticated } = require('../middleware/user.middleware');
 
-// Apply middlewares to all routes in this router
+
 router.use(logRequests);
 router.use(setHeaders);
 
