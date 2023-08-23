@@ -74,17 +74,11 @@ Delete a User
 Endpoint: /api/users/deleteUser/:id
 Method: DELETE
 Headers: auth-token: YOUR_JWT_TOKEN
-Note: When using routes that require authentication, ensure you send the JWT token in the auth-token header.
 
 {
   "Username": "newUsername",
   "email": "newemail@example.com",
   "password": "newPassword"
 }
-Delete a User
-Endpoint: /api/users/deleteUser/:id
-Method: DELETE
-Headers: auth-token: YOUR_JWT_TOKEN
 Note: When using routes that require authentication, ensure you send the JWT token in the auth-token header.
-
 
